@@ -1,7 +1,10 @@
-<h2>Band Names:</h2>
-<ul>
-    <li *ngFor="let band of bands">
-        <button (click)="onSelect(band)">{{ band.name }}</button>
-        <button class="delete" (click)="onDelete(band)">X</button>
-    </li>
-</ul>
+<div class="list">
+    <h2>Band Names:</h2>
+    <p>Click a band to edit name</p>
+    <ul>
+        <li *ngFor="let band of bands">
+            <button class="band" (click)="onSelect(band)">{{ band.name }}</button>
+            <button class="delete" (click)="onDelete(band)">X</button>
+        </li>
+    </ul>
+</div>

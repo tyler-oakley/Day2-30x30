@@ -1,3 +1,9 @@
-<h1>{{title}}</h1>
-<app-list [bands]="bandList" (onBandSelected)="selectBand($event)" (onDeleteBand)="deleteFromList($event)"></app-list>
-<app-detail [selectedBand]="selectedBand" (onAddBand)="addBandToList($event)"></app-detail>
+<body>
+    <h1>{{title}}</h1>
+    <div class="container">
+        <app-list [bands]="bandList" (onBandSelected)="selectBand($event)"
+            (onDeleteBand)="deleteFromList($event)"></app-list>
+        <app-detail [selectedBand]="selectedBand" (onAddBand)="addBandToList($event)"
+            (onDoneEditing)="doneEditing()"></app-detail>
+    </div>
+</body>

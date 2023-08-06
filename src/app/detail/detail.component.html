@@ -1,2 +1,6 @@
-<input #addBox [(ngModel)]="selectedBand.name" placeholder="Enter band name">
-<button (click)="onAdd(addBox.value)">Add</button>
+<div class="detail">
+    <input #addBox [(ngModel)]="selectedBand.name" placeholder="Enter band name">
+    <button (click)="onAdd(addBox.value)">Add</button>
+    <button (click)="doneEditing()">Done Editing</button>
+    <p>Click "Done Editing" to return to Add Mode</p>
+</div>

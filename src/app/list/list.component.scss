@@ -1,4 +1,19 @@
+p {
+    font-size: medium;
+    font-style: italic;
+}
+
 .delete {
     color: red;
     background-color: darkred;
+    font-size: larger;
+}
+
+.band { 
+    background-color: lightblue;
+    font-size: larger;
+}
+
+.list { 
+    width: 100%;
 }

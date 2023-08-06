@@ -9,13 +9,18 @@ import { Band } from '../band';
 export class DetailComponent {
   @Input() selectedBand: Band = new Band('');
   @Output() onAddBand = new EventEmitter();
+  @Output() onDoneEditing = new EventEmitter();
 
   onAdd(bandName: string) {
     if (bandName) {
-      this.onAddBand.emit(bandName);
+      this.onAddBand.emit(new Band(bandName));
     }
     else {
       alert("You cannot add a band that doesn't have a name!");
     }
+  }
+
+  doneEditing() {
+    this.onDoneEditing.emit();
   }
 }
