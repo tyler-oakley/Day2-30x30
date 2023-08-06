@@ -1,0 +1,7 @@
+<h2>Band Names:</h2>
+<ul>
+    <li *ngFor="let band of bands">
+        <button (click)="onSelect(band)">{{ band.name }}</button>
+        <button class="delete" (click)="onDelete(band)">X</button>
+    </li>
+</ul>
